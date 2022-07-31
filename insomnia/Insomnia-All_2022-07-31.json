@@ -1,0 +1,296 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2022-07-31T20:54:27.206Z",
+  "__export_source": "insomnia.desktop.app:v2022.4.2",
+  "resources": [
+    {
+      "_id": "req_30e1412b9b1f426d9d82296775a4e623",
+      "parentId": "fld_ec5b26545f5f4724901707d09ba7c058",
+      "modified": 1659300802359,
+      "created": 1636997931714,
+      "url": "{{server_dev}}/taxes",
+      "name": "taxes",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_1b4211a9cbe84777977d53d299416443"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1631025466918.375,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_ec5b26545f5f4724901707d09ba7c058",
+      "parentId": "wrk_45fa56977c1244ce8c303b4d6c6e9ff5",
+      "modified": 1636997493253,
+      "created": 1636997488804,
+      "name": "taxes",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1631036649274.5703,
+      "_type": "request_group"
+    },
+    {
+      "_id": "wrk_45fa56977c1244ce8c303b4d6c6e9ff5",
+      "parentId": null,
+      "modified": 1659223015074,
+      "created": 1631022928047,
+      "name": "etl",
+      "description": "",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_1c4e28ecb2474030bd11e37992c5dbb0",
+      "parentId": "fld_ec5b26545f5f4724901707d09ba7c058",
+      "modified": 1659300799988,
+      "created": 1659295693270,
+      "url": "{{server_dev}}/taxes/882d77b0-1731-4064-9dcd-b27d7d4ded85",
+      "name": "tax",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_1b4211a9cbe84777977d53d299416443"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1631025466868.375,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_f35a3c4c8fe94eb79b642a860562c8bb",
+      "parentId": "fld_1a628984054449a5849f391c8552bc58",
+      "modified": 1659300808685,
+      "created": 1637077963678,
+      "url": "{{ _.server_dev }}/excel?year=2023",
+      "name": "excel",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "multipart/form-data",
+        "params": [
+          {
+            "id": "pair_5115090f69fe4e3f8b074149489c28b3",
+            "name": "excel",
+            "value": "",
+            "description": "",
+            "disabled": false,
+            "type": "file",
+            "fileName": "C:\\Users\\jesus\\projects\\etl-sheetjs\\static\\excel\\Calendario-vencimientos-impuestos.xlsx"
+          }
+        ]
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "multipart/form-data",
+          "id": "pair_05c77932d6d946ff88286f5d46444507"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1631036649149.5703,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_1a628984054449a5849f391c8552bc58",
+      "parentId": "wrk_45fa56977c1244ce8c303b4d6c6e9ff5",
+      "modified": 1638794296501,
+      "created": 1637077943571,
+      "name": "excel",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1631036649237.0703,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_1922c48907864ee2af34bb898fd79138",
+      "parentId": "fld_1a628984054449a5849f391c8552bc58",
+      "modified": 1659300806342,
+      "created": 1638880426152,
+      "url": "{{ _.server_dev }}/excel",
+      "name": "excel",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "multipart/form-data",
+          "id": "pair_61705000520642b7abe0b690961d8510"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1638880426209,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "env_91911eedb6c949f5bae69cb3db009dc346eda640",
+      "parentId": "wrk_45fa56977c1244ce8c303b4d6c6e9ff5",
+      "modified": 1631022928055,
+      "created": 1631022928055,
+      "name": "Base Environment",
+      "data": {},
+      "dataPropertyOrder": null,
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1631022928055,
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_91911eedb6c949f5bae69cb3db009dc346eda640",
+      "parentId": "wrk_45fa56977c1244ce8c303b4d6c6e9ff5",
+      "modified": 1637932232377,
+      "created": 1631022928057,
+      "name": "Default Jar",
+      "cookies": [
+        {
+          "key": "_octo",
+          "value": "GH1.1.48836914.1637160576",
+          "expires": "2022-11-17T14:49:36.000Z",
+          "domain": "github.com",
+          "path": "/",
+          "secure": true,
+          "extensions": ["SameSite=Lax"],
+          "hostOnly": false,
+          "creation": "2021-11-17T14:49:36.675Z",
+          "lastAccessed": "2021-11-17T14:49:36.675Z",
+          "id": "9486508306543464"
+        },
+        {
+          "key": "logged_in",
+          "value": "no",
+          "expires": "2022-11-17T14:49:36.000Z",
+          "domain": "github.com",
+          "path": "/",
+          "secure": true,
+          "httpOnly": true,
+          "extensions": ["SameSite=Lax"],
+          "hostOnly": false,
+          "creation": "2021-11-17T14:49:36.675Z",
+          "lastAccessed": "2021-11-17T14:49:36.675Z",
+          "id": "40354820811166414"
+        },
+        {
+          "key": "_gh_sess",
+          "value": "D1LzBOiK3sMGniQWj7Ny03n5a1MPsbf94gCfMKR3LyXAsTIKoXeW2cdcMS5s4n0SFx5RTRZm5YzCyzxJHN8YK46NsMunuad%2FDRKZZe8zuATY7qZjI%2BWsEebgmbWyj3Z5czjO6ri%2FczM%2BylNjultYCkT469RucqFos3PQNXYJdgCsuiCegnIJQDMJrvyqXVRPznPdSacMtnrhNxilMoFHz5vg5MA0gqqzAqwvFbxx3TbzFKrVxfqOhRvWFOnb2X8fqjaD6S%2BKqx0%2B4ckox%2B6JYQ%3D%3D--OlfhGLNfVZE0%2F90c--s%2FpyQSWuyjlz%2BSfFVNnctQ%3D%3D",
+          "domain": "github.com",
+          "path": "/",
+          "secure": true,
+          "httpOnly": true,
+          "extensions": ["SameSite=Lax"],
+          "hostOnly": true,
+          "creation": "2021-11-17T14:49:36.676Z",
+          "lastAccessed": "2021-11-17T14:51:45.043Z",
+          "id": "393947594475077"
+        },
+        {
+          "key": "_gh_sess",
+          "value": "Drdkx9x6ogPTD2qG3kIs1Df9b9TJsfQUNR1itpLIBuVuHEbG2hWdqGgPRewkrNLn6Q8EvZpmp4NtqNsJ0RdUiFsiODuhV%2FdOpGLpcZUWvmSnHYHXPI%2FfE1ydXZUV4PAqA04QoWFg8QuAXSeSDT8L2lFiz6s%2F1snwmQ48DkUBWSFkHA%2BnDMLNVMj4pAWC7FWcMuKhdZ8sKBg7i0aKBXIlxseQJLK88OAxefWvX5adQ0JWzt7EpsOVVMKzvskBRcUto4ouTHJL8zLXtrkJhf29YQ%3D%3D--xeD6UwX6jnopn2U1--MLlVMOUfqCuUKjoxExon4g%3D%3D",
+          "domain": "raw.githubusercontent.com",
+          "path": "/",
+          "secure": true,
+          "httpOnly": true,
+          "extensions": ["SameSite=Lax"],
+          "hostOnly": true,
+          "creation": "2021-11-17T14:50:24.698Z",
+          "lastAccessed": "2021-11-17T14:50:24.699Z",
+          "id": "3853770947303268"
+        },
+        {
+          "key": "__Host-GAPS",
+          "value": "1:0IjCxS1esfuGohHn1C7KrW7Zp-HuRQ:nju6--xjOF-Wertm",
+          "expires": "2023-11-26T13:10:30.000Z",
+          "domain": "accounts.google.com",
+          "path": "/",
+          "secure": true,
+          "httpOnly": true,
+          "extensions": ["Priority=HIGH"],
+          "hostOnly": true,
+          "creation": "2021-11-26T13:10:06.167Z",
+          "lastAccessed": "2021-11-26T13:10:32.377Z",
+          "id": "1675101726147854"
+        },
+        {
+          "key": "GEM",
+          "value": "CgptaW51dGVtYWlkEIbS-eLVLw==",
+          "domain": "accounts.google.com",
+          "path": "/",
+          "secure": true,
+          "httpOnly": true,
+          "hostOnly": true,
+          "creation": "2021-11-26T13:10:06.167Z",
+          "lastAccessed": "2021-11-26T13:10:32.377Z",
+          "id": "46926929821311214"
+        }
+      ],
+      "_type": "cookie_jar"
+    },
+    {
+      "_id": "spc_9d4b5fd3d34b42dba8dcfacfad25bcb0",
+      "parentId": "wrk_45fa56977c1244ce8c303b4d6c6e9ff5",
+      "modified": 1631022928050,
+      "created": 1631022928050,
+      "fileName": "Liber",
+      "contents": "",
+      "contentType": "yaml",
+      "_type": "api_spec"
+    },
+    {
+      "_id": "env_072b6e2557be4d4a986995cd2c0236af",
+      "parentId": "env_91911eedb6c949f5bae69cb3db009dc346eda640",
+      "modified": 1659300787406,
+      "created": 1632773835845,
+      "name": "etl",
+      "data": { "server_dev": "http://localhost:4000" },
+      "dataPropertyOrder": { "&": ["server_dev"] },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1632773835845,
+      "_type": "environment"
+    }
+  ]
+}
